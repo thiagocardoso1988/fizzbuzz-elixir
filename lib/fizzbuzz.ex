@@ -1,7 +1,8 @@
 defmodule Fizzbuzz do
   def build(filename) do
-    file = File.read(filename)
-    handle_file_read(file)
+    filename
+    |> File.read()
+    |>handle_file_read()
   end
 
   def handle_file_read({:ok, result}), do: result
